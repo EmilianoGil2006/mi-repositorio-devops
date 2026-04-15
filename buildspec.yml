@@ -1,0 +1,14 @@
+# Para Aws CodeBuild
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  build:
+    commands:
+      - echo "instalando dependencias"
+      - pip install flask pytest
+      - echo "ejecutando pruebas"
+  post_build:
+    commands:
+      - echo "construccion finalizada con exito el `date`"
